@@ -2,11 +2,9 @@ export default {
   preset: "ts-jest",
   testEnvironment: "node",
   transform: {
-    "^.+\\.tsx?$": [
-      "ts-jest",
-      {
-        tsconfig: "tsconfig.json",
-      },
-    ],
+    "^.+.(t|j)sx?$": ["@swc/jest"],
   },
+  transformIgnorePatterns: ["node_modules/(?!(jstoxml)/)"],
+  coverageProvider: "v8",
+  clearMocks: true,
 };
