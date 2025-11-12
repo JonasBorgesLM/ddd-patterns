@@ -1,0 +1,27 @@
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@accept = application/xml
+
+# Should create a customer
+POST {{host}}/customer HTTP/1.1
+Host: {{host}}
+Content-Type: {{contentType}}
+
+{
+    "name": "John",
+    "address": {
+        "street": "Street",
+        "city": "City",
+        "number": 123,
+        "zip": "12345"
+    }
+}
+###
+
+# Should list all customer - xml
+GET {{host}}/customer HTTP/1.1
+Host: {{host}}
+Accept: {{accept}}
+###

@@ -1,4 +1,4 @@
-const { toXML } = require("jstoxml");
+import { toXML } from "jstoxml";
 import { OutputListCustomerDto } from "../../../usecase/customer/list/list.customer.dto";
 
 export default class CustomerPresenter {
