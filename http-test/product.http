@@ -1,0 +1,23 @@
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@accept = application/xml
+
+# Should create a product
+POST {{host}}/product HTTP/1.1
+Host: {{host}}
+Content-Type: {{contentType}}
+
+{
+    "type": "b",
+    "name": "Product 1",
+    "price": 10
+}
+###
+
+# Should list all product - xml
+GET {{host}}/product HTTP/1.1
+Host: {{host}}
+Accept: {{accept}}
+###
