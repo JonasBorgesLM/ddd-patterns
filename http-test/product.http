@@ -10,9 +10,9 @@ Host: {{host}}
 Content-Type: {{contentType}}
 
 {
-    "type": "b",
-    "name": "Product 1",
-    "price": 10
+    "type": "a",
+    "name": "",
+    "price": null
 }
 ###
 
