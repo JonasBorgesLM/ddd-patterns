@@ -1,6 +1,6 @@
 import Notification from "./notification";
 
-describe("Unit testss for notifications", () => {
+describe("Unit tests for notifications", () => {
   it("should create errors", () => {
     const notification = new Notification();
     const error = {
